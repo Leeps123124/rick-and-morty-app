@@ -1,0 +1,31 @@
+.header {
+  padding: 20px;
+  background-color: #20232a;
+  border-bottom: 2px solid #61dafb;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.link {
+  padding-bottom: 6px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.link:hover {
+  color: #61dafb;
+}
+
+.active {
+  color: #61dafb;
+  border-bottom-color: #61dafb;
+}

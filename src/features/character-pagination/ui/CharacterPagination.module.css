@@ -1,0 +1,50 @@
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+  margin: 32px auto 0;
+}
+
+.button {
+  min-width: 0;
+  padding: 10px 14px;
+
+  color: #ffffff;
+  font-weight: 600;
+
+  background-color: #20232a;
+  border: 1px solid #343842;
+  border-radius: 10px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  color: #20232a;
+  background-color: #61dafb;
+  border-color: #61dafb;
+}
+
+.info {
+  margin: 0;
+
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .pagination {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}

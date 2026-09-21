@@ -1,0 +1,26 @@
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.title {
+  margin: 0 0 24px;
+
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.2;
+}
+
+.empty {
+  margin: 0;
+  padding: 40px 20px;
+
+  color: #64748b;
+  font-size: 18px;
+  text-align: center;
+
+  background-color: #ffffff;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+}
