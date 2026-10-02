@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from "../../../app/store/hooks";
-import type { Character } from "../../../entities/character/model/types";
+import type { FavoriteCharacter } from "../model/types";
 import { toggleFavorite } from "../model/favoritesSlice";
 import styles from "./FavoritesToggle.module.css";
 interface FavoritesToggleProps {
-  character: Character;
+  character: FavoriteCharacter;
 }
 export default function FavoritesToggle({ character }: FavoritesToggleProps) {
   const dispatch = useAppDispatch();
@@ -13,7 +13,13 @@ export default function FavoritesToggle({ character }: FavoritesToggleProps) {
   );
 
   function handleClick() {
-    dispatch(toggleFavorite(character));
+    const favoriteCharacter: FavoriteCharacter = {
+      id: character.id,
+      name: character.name,
+      status: character.status,
+      image: character.image,
+    };
+    dispatch(toggleFavorite(favoriteCharacter));
   }
   return (
     <button className={styles.button} type="button" onClick={handleClick}>
