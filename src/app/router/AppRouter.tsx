@@ -9,8 +9,9 @@ export default function AppRouter() {
       <Route path="/characters" element={<CharactersPage />}></Route>
       <Route path="/favorites" element={<FavoritesPage />}></Route>
       <Route path="/characters/:id" element={<CharacterDetailsPage />}></Route>
-      <Route path="/*" element={<NotFoundPage />}></Route>
+      <Route path="/404" element={<NotFoundPage />}></Route>
       <Route path="/" element={<Navigate to="/characters" replace />}></Route>
+      <Route path="/*" element={<NotFoundPage />}></Route>
     </Routes>
   );
 }

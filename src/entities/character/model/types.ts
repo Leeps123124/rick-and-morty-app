@@ -12,6 +12,7 @@ export interface Character {
   url: string;
   created: string;
 }
+
 export interface CharacterLocation {
   name: string;
   url: string;

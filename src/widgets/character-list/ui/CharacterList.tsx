@@ -1,8 +1,8 @@
-import type { Character } from "../../../entities/character/model/types";
+import type { FavoriteCharacter } from "../../../features/favorites/model/types";
 import CharacterCard from "./CharacterCard";
 import styles from "./CharacterList.module.css";
 interface CharacterListProps {
-  characters: Character[];
+  characters: FavoriteCharacter[];
 }
 
 export default function CharacterList({ characters }: CharacterListProps) {

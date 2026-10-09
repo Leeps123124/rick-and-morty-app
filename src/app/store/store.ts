@@ -16,10 +16,17 @@ export const store = configureStore({
   },
   preloadedState,
 });
+let previousFavorites = store.getState().favorites.items;
 
 store.subscribe(() => {
-  const state = store.getState();
-  saveFavorites(state.favorites.items);
+  const currentFavorites = store.getState().favorites.items;
+
+  if (currentFavorites === previousFavorites) {
+    return;
+  }
+
+  previousFavorites = currentFavorites;
+  saveFavorites(currentFavorites);
 });
 
 export type RootState = ReturnType<typeof store.getState>;

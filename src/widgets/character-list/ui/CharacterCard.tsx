@@ -1,9 +1,9 @@
-import type { Character } from "../../../entities/character/model/types";
+import type { FavoriteCharacter } from "../../../features/favorites/model/types";
 import styles from "./CharacterCard.module.css";
 import { Link } from "react-router-dom";
 import FavoritesToggle from "../../../features/favorites/ui/FavoritesToggle";
 interface CharacterCardProps {
-  character: Character;
+  character: FavoriteCharacter;
 }
 
 export default function CharacterCard({ character }: CharacterCardProps) {

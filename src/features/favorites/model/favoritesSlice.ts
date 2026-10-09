@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Character } from "../../../entities/character/model/types";
+import type { FavoriteCharacter } from "./types";
 
 export interface FavoritesState {
-  items: Character[];
+  items: FavoriteCharacter[];
 }
 
 const initialState: FavoritesState = {
@@ -14,7 +14,7 @@ export const favoritesSlice = createSlice({
   name: "favorites",
   initialState,
   reducers: {
-    toggleFavorite: (state, action: PayloadAction<Character>) => {
+    toggleFavorite: (state, action: PayloadAction<FavoriteCharacter>) => {
       const isFavorite = state.items.some(
         (item) => item.id === action.payload.id,
       );
